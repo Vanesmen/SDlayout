@@ -1,6 +1,8 @@
 .wrapper {
     width: 100%;
     min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -8,18 +10,31 @@
     width: 240px;
     background: #F3F4F9;
     min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-grow: 0;
-    flex-direction: column;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     position: relative;
     position: fixed;
     z-index: 999;
 }
 
 .logoBlock {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 42px 0px 0px 42px;
     
 }
@@ -27,7 +42,8 @@
 .logoBlock-image {
     width: 50px;
     height: 50px;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
 }
 
 .logoBlock-title {
@@ -43,6 +59,8 @@
 }
 
 .navigation-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     font-family: "OpenSans";
     font-weight: 600;
@@ -145,11 +163,18 @@
 }
 
 .mainContent {
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     min-height: 100vh;
     background-color: #fafafa;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding-left: 240px;
 }
 
@@ -160,8 +185,12 @@
 }
 
 .searchBar {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border: 1px solid rgba(51, 51, 51, 0.2);
     border-radius: 50px;
     height: 50px;
@@ -175,8 +204,10 @@
 .searchBar-icon {
     width: 20px;
     height: 20px;
-    object-fit: contain;
-    filter: contrast(1);
+    -o-object-fit: contain;
+       object-fit: contain;
+    -webkit-filter: contrast(1);
+            filter: contrast(1);
 }
 
 .searchBar-input {
@@ -184,22 +215,36 @@
     font-weight: 400;
     color: rgba(0, 0, 0, 0.45);
     border: none;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     margin-left: 10px;
 }
 
 .couponBlock {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background: #FAFAFA;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     padding: 40px 50px 40px 50px;
 }
 
 .couponCard {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     background: #FFFFFF;
     padding: 15px 0px 15px 20px;
     max-width: 345px;
@@ -208,7 +253,8 @@
     height: 160px;
     position: relative;
     border-radius: 10px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
     margin-bottom: 20px;
     margin-left: 10px;
     margin-right: 10px;
@@ -270,7 +316,8 @@
     position: absolute;
     top: 0;
     right: 0;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
     height: 100%;
     border-radius: 0px 10px 10px 0px;
 }
@@ -299,13 +346,17 @@
     position: absolute;
     display: block;
     background-color: #fafafa;
-    box-shadow: inset 0px 2px 6px rgb(0 0 0 / 15%);
-    transform: rotate(-45deg);
+    -webkit-box-shadow: inset 0px 2px 6px rgb(0 0 0 / 15%);
+            box-shadow: inset 0px 2px 6px rgb(0 0 0 / 15%);
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
     width: 15px;
     height: 15px;
     left: -7px;
     top: 4px;
-    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
 }
 
 .mobileTab {
@@ -319,8 +370,12 @@
 
     .navigation-title {
         opacity: 0;
+        -webkit-transition: opacity 0.2s;
+        -o-transition: opacity 0.2s;
         transition: opacity 0.2s;
-        transition-delay: 0.2s;
+        -webkit-transition-delay: 0.2s;
+             -o-transition-delay: 0.2s;
+                transition-delay: 0.2s;
     }
 
     .sidebar_open .navigation-title {
@@ -329,8 +384,12 @@
 
     .logoBlock-title {
         opacity: 0;
+        -webkit-transition: opacity 0.2s;
+        -o-transition: opacity 0.2s;
         transition: opacity 0.2s;
-        transition-delay: 0.2s;
+        -webkit-transition-delay: 0.2s;
+             -o-transition-delay: 0.2s;
+                transition-delay: 0.2s;
         
     }
     .sidebar_open .logoBlock-title {
@@ -352,10 +411,19 @@
     }
 
     .mobileTab {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         background-image: url(../images/mobile_tab.png);
         background-size: contain;
         background-repeat: no-repeat;
@@ -373,11 +441,15 @@
         height: 2px;
         background: #262626;
         margin: 4px 0;
+        -webkit-transition: 0.4s;
+        -o-transition: 0.4s;
         transition: 0.4s;
     }
 
     .sidebar_open .mobileTab-bar1 {
-        transform: rotate(-45deg) translate(-7px, 7px); ;
+        -webkit-transform: rotate(-45deg) translate(-7px, 7px);
+            -ms-transform: rotate(-45deg) translate(-7px, 7px);
+                transform: rotate(-45deg) translate(-7px, 7px); ;
     }
     
     .sidebar_open .mobileTab-bar2 {
@@ -385,12 +457,16 @@
     }
 
     .sidebar_open .mobileTab-bar3 {
-        transform: rotate(45deg) translate(-7px, -7px); ;
+        -webkit-transform: rotate(45deg) translate(-7px, -7px);
+            -ms-transform: rotate(45deg) translate(-7px, -7px);
+                transform: rotate(45deg) translate(-7px, -7px); ;
     }
     
 
     .sidebar {
         width: 104px;
+        -webkit-transition: 0.4s;
+        -o-transition: 0.4s;
         transition: 0.4s;
     }
 
@@ -448,4 +524,3 @@
         padding: 0 20px;
     }
 } 
-
